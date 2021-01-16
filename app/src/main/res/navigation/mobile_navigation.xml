@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.dora2000.ucspyayoq.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_fifthYear"
+            app:destination="@id/fifthYear" />
+        <action
+            android:id="@+id/action_nav_home_to_FIrstYear_Fragment"
+            app:destination="@id/FIrstYear_Fragment" />
+        <action
+            android:id="@+id/action_nav_home_to_thirdYear2"
+            app:destination="@id/thirdYear" />
+        <action
+            android:id="@+id/action_nav_home_to_secondYear"
+            app:destination="@id/secondYear" />
+        <action
+            android:id="@+id/action_nav_home_to_fourthYear"
+            app:destination="@id/fourthYear" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.dora2000.ucspyayoq.ui.setting.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.dora2000.ucspyayoq.ui.about_us.AboutUsFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/FIrstYear_Fragment"
+        android:name="com.dora2000.ucspyayoq.FIrstYear_Fragment"
+        android:label="First Year"
+        tools:layout="@layout/first_year" >
+        <action
+            android:id="@+id/action_FIrstYear_Fragment_to_viewer"
+            app:destination="@id/viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondYear"
+        android:name="com.dora2000.ucspyayoq.SecondYear"
+        android:label="Second Year"
+        tools:layout="@layout/second_year" >
+        <action
+            android:id="@+id/action_secondYear_to_viewer"
+            app:destination="@id/viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdYear"
+        android:name="com.dora2000.ucspyayoq.ThirdYear"
+        android:label="Third Year"
+        tools:layout="@layout/third_year" >
+        <action
+            android:id="@+id/action_thirdYear_to_viewer"
+            app:destination="@id/viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthYear"
+        android:name="com.dora2000.ucspyayoq.FourthYear"
+        android:label="Fourth Year"
+        tools:layout="@layout/fourth_year" >
+        <action
+            android:id="@+id/action_fourthYear_to_viewer"
+            app:destination="@id/viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifthYear"
+        android:name="com.dora2000.ucspyayoq.FifthYear"
+        android:label="Fifth Year"
+        tools:layout="@layout/fifth_year" >
+        <action
+            android:id="@+id/action_fifthYear_to_viewer"
+            app:destination="@id/viewer" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewer"
+        android:name="com.dora2000.ucspyayoq.Viewer"
+        android:label="Old Question"
+        tools:layout="@layout/viewer" >
+        <argument
+            android:name="year"
+            app:argType="integer" />
+        <argument
+            android:name="major"
+            app:argType="string" />
+        <argument
+            android:name="oq_year"
+            app:argType="string" />
+        <argument
+            android:name="semester"
+            app:argType="integer" />
+    </fragment>
+</navigation>
